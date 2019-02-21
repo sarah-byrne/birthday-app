@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require_relative './lib/person'
 
 class Birthday < Sinatra::Base
   get '/' do
@@ -6,7 +7,8 @@ class Birthday < Sinatra::Base
   end
 
   post '/birthday' do
-    @name = params[:name]
+    @person = Person.new(params[:name], "Jan", 1)
+    @name = @person.name
     erb :birthday
   end
 
