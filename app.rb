@@ -11,6 +11,7 @@ class Birthday < Sinatra::Base
     @name = @person.name
     @month = @person.birth_month
     @day = @person.birth_day
+    @is_birthday = @person.birthday?
     erb :birthday
   end
 

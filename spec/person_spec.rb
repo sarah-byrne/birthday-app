@@ -13,4 +13,8 @@ describe Person do
     sarah = Person.new("Sarah","Jan",1)
     expect(sarah.birth_day).to eq(1)
   end
+  it "knows if it is its birthday" do
+    sarah = Person.new("Sarah","Jan",1)
+    expect(sarah.birthday?).to eq(false)
+  end
 end

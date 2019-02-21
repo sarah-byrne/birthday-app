@@ -1,2 +1,6 @@
-Happy birthday <%= @name %> </br>
-Your birthday is <%= @day %> <%= @month %>
+<% if @is_birthday %>
+  Happy birthday <%= @name %> </br>
+  Your birthday is <%= @day %> <%= @month %>
+<% else %>
+  Your birthday will be in x days
+<% end %>
