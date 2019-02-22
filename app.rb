@@ -8,10 +8,6 @@ class Birthday < Sinatra::Base
 
   post '/birthday' do
     @person = Person.new(params[:name], params[:month], params[:day])
-    @name = @person.name
-    @month = @person.birth_month
-    @day = @person.birth_day
-    @is_birthday = @person.birthday?
     erb :birthday
   end
 

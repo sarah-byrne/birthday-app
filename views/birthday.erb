@@ -1,6 +1,6 @@
-<h1>Hello <%= @name %></h1></br>
-Your birthday is <%= @day %> <%= @month %>
-<% if @is_birthday %>
+<h1>Hello <%= @person.name %></h1></br>
+Your birthday is <%= @person.birth_day %> <%= @person.birth_month %></br>
+<% if @person.birthday? %>
   <h2>Happy birthday! </h2>
 <% else %>
   Your birthday will be in <%= @person.days_until_bday%>
