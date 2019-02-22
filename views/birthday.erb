@@ -1,6 +1,12 @@
+<h1>Hello <%= @name %></h1></br>
+Your birthday is <%= @day %> <%= @month %>
 <% if @is_birthday %>
-  Happy birthday <%= @name %> </br>
-  Your birthday is <%= @day %> <%= @month %>
+  <h2>Happy birthday! </h2>
 <% else %>
-  Your birthday will be in x days
+  Your birthday will be in <%= @person.days_until_bday%>
+  <% if @person.days_until_bday > 1 %>
+    days
+  <% else %>
+    day
+  <% end %>
 <% end %>
